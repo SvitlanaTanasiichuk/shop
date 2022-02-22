@@ -1,0 +1,14 @@
+<mat-card>
+  <h2>Shopping list
+    <mat-icon>shopping_basket</mat-icon>
+  </h2>
+  <div *ngIf="shoppingList$ | async; else elseBlock">
+    <ng-container *ngFor="let product of shoppingList$ | async; trackBy: traCkByProduct">
+      <app-cart [product]="product"></app-cart>
+      <mat-divider></mat-divider>
+    </ng-container>
+  </div>
+  <ng-template #elseBlock>
+    <p>Shopping list is empty</p>
+  </ng-template>
+</mat-card>
