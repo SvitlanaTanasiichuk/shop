@@ -36,3 +36,4 @@ import { ProductComponent } from './products/components/product/product.componen
 })
 export class AppModule {
 }
+// Замечаний нет
